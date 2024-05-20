@@ -1,0 +1,38 @@
+<%- include ("includes/header", { "title" : "Home" }) %>
+
+<!-- As a heading -->
+<nav class="navbar bg-body-tertiary">
+  <div class="container-fluid">
+    <span class="navbar-brand mb-0 h1">Pdf Filler</span>
+  </div>
+</nav>
+
+
+<div class="container" style="margin-top: 50px;">
+  <div class="row">
+      <div class="col-md-12">
+          <form action="/submit" method="POST">
+              <div class="form-group mt-3">
+                  <label for="">Full Name</label>
+                  <input type="text" name="full_name" class="form-control" placeholder="Enter your full name" required>
+              </div>
+              <div class="form-group mt-3">
+                  <label for="">Location</label>
+                  <input type="text" name="location" class="form-control" placeholder="Location" required>
+              </div>
+              <div class="form-group mt-3">
+                  <label for="floatingTextarea">Requirements</label>
+                  <textarea class="form-control" placeholder="Describe your requirements to us" id="floatingTextarea" name="requirements"></textarea>
+                  
+                </div>
+
+              <input type="submit" value="Submit" class="btn btn-primary mt-4">
+          </form>
+          
+      </div>
+  </div>
+</div>
+
+
+
+  <%- include ("includes/footer") %>
